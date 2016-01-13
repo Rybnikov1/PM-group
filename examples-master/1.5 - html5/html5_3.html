@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML5 new els</title>
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    <article >         
+        <section>
+        <h2>Bi-directional</h2>
+         <p dir="ltr">Normal text <bdi>Bi-directional text</bdi></p>
+        </section>  
+         <section>
+         <h2>Command</h2>
+          <command> THIS IS DEPRECATED!!!!
+        </section>   
+         <section>
+         <h2>Datalist</h2>
+         <input list="data">
+          <datalist id="data">
+            <option value="opt1">
+            <option value="opt2">
+            <option value="opt3">
+          </datalist>
+        </section>                
+         <section>
+         <h2>Details (not final)</h2>
+         <details>
+            <summary>Some details</summary>
+            <p>More info about the details.</p>
+          </details>
+        </section>  
+        <section>
+         <h2>Summary (also not final)</h2>
+         <details>
+            <summary>This is the summary</summary>
+            <p>More info about the details.</p>
+          </details>
+        </section>  
+         <section>
+         <h2>Keygen is deprecated!!!</h2>
+         <form method="post" action="file:///D:/Projects/New%20folder%20(4)/html5_3.html">
+           <keygen name="RSA public key" challenge="123456789" KEYTYPE="RSA">
+           <input type="submit" name="createcert" value="Generate">
+         </form>
+        </section>  
+        <section>
+         <h2>Mark</h2>
+         Used to <mark>highlight text</mark>
+        </section>    
+        <section>
+         <h2>Meter</h2>
+          <meter min="0" max="100" value="38" id="meter">
+          <script type="text/javascript">
+
+            var meter = document.getElementById('meter');
+
+            var counter1 = 0;
+            var counter2 = 100;
+            window.requestAnimationFrame(increase());
+            function increase() {
+                      if (counter1 < 100) {
+                        meter.value = counter1;                      
+                        counter1++;
+                        window.requestAnimationFrame(increase);
+                      } else if (counter2 > 0) {
+                        meter.value = counter2;                      
+                        counter2--;
+                        window.requestAnimationFrame(increase);
+                      } else {
+                        counter1 = 0;
+                        counter2 = 100;
+                        window.requestAnimationFrame(increase);
+                      }                     
+                    }
+          </script>
+        </section> 
+        <section>
+         <h2>Output</h2>
+         <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+             <input type="range" name="b" value="50" /> +
+             <input type="number" name="a" value="10" /> =
+             <output name="result"></output>
+         </form>
+        </section>  
+        <section>
+         <h2>Progress</h2>
+         <progress value="70" max="100">70 %</progress>
+        </section>  
+        <section>
+         <h2>Word break opportunity</h2>
+          <div style="width:40px; height:200px">Word bre<wbr>ak opp<wbr>ortu<wbr>nity all<wbr>ows us to 
+          spe<wbr>ci<wbr>fy whe<wbr>re we can bre<wbr>ak a wo<wbr>rd
+          </div>
+        </section> 
+      
+    </article>    
+  </body>
+</html>

@@ -1,0 +1,23 @@
+.footer {
+    font-family: $main-font-thin;
+    @extend .header;
+    padding: 50px 0 20px 0;
+    text-align: center;
+}
+
+.footer__logo {
+    font-weight: 800;
+    font-size: 40px;
+    margin: 0 0 20px 0;
+    font-family: $main-font-bold;
+}
+
+.footer__to-top {
+  @include spritebox(-372px, -73px, 12px, 20px);
+    display: inline-block;
+} 
+
+.footer__copyright {
+    margin-bottom: 15px;
+    color: $darken-text-color;
+}

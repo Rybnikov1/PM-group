@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Basic selectors</title>
+		<style>
+			/*This rule applies to all p elements*/
+			p {
+				font-size: 18px;
+			}
+			/*This is a rule for a class*/
+			.par {
+				color:blue;
+			}
+			/*this rule is applied to an element with certain id*/
+			#this-paragraph {
+				color: red;
+			}
+			/*this selector is applying therule to all p elements inside a div*/
+			div p {
+				font-weight: 700;	
+				text-indent: 20px;			
+			}
+			/*same here - a rule for all elements with .par class inside any div*/
+			div .par {
+				text-decoration: underline;
+			}
+
+		</style>
+	</head>
+	<body>
+		<p>This paragraph usese styles for all p elements (p selector)</p>
+		<p class="par">This paragraph also uses styles for "par" class</p>
+		<p id="this-paragraph">This paragraph also uses styles, defined for its unique id</p>
+		<div> 
+			<p>A paragraph inside a div</p>
+			<p class="par">A paragraph inside a div with "par" class</p>
+		</div>
+	</body>
+</html>

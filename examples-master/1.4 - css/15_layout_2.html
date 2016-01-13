@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Layout: float and clear</title>
+		<style>
+		.container {
+			width: 400px;
+		}
+		.container div {
+			margin: 5px;
+			width: 100px;
+			height: 100px;
+			border: 1px solid black;
+		}
+		.float-left {
+			background-color: green;
+			float: left;
+		}
+		.float-right {
+			background-color: magenta;
+			float: right;
+		}
+		.clear {
+			background-color: blue;
+			clear: left;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="container">			
+			<div class="float-left">Left</div>
+			<div class="float-right">Right</div>
+			<div class="float-left">Left</div>
+			<p>Some simple text. We see that it doesnt
+			start from a new line. It means that floating elements
+			are aligned to the left or right side, and they can be 
+			surrounded by other elements
+			</p>			
+			<div class="float-left">Left</div>		
+			<div class="clear">clear</div>			
+			<div class="float-right">Right</div>
+			<div class="clear">clear</div>				
+			<p>Clear property is used to determine if the element will surround 
+			any floating elements or it will appear on a new line. It also applies 
+			to other elements after it. In this case we only clear the left floats
+			If we clear both or right, the "clear" div will apear below all floating 
+			elements
+			</p>
+		</div>
+	</body>
+</html>

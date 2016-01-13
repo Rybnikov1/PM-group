@@ -1,0 +1,26 @@
+#nav {
+    @color: #333;
+    .text {
+        font-size: 14px;
+        color: @color;
+    }   
+    .a() {
+        color: aquamarine;
+        text-decoration: none;
+    }
+    a {
+        .a;
+        font-size: 14px;
+    }
+}
+
+#article {
+//    @color:#222;
+//    .text; - will NOT work
+//    #nav > .text; - also works
+    #nav .text;
+    
+    a {
+        #nav .a;    
+    }
+}

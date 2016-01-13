@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Backgrounds</title>
+		<style>
+			.color {
+				background: linear-gradient(to bottom, #6db3f2 0%, #1e69de 100%); 
+				border-radius: 35px;
+				border: none !important;
+			}
+			.image {
+				background-image: url(bg.png);
+			}
+			.repeat {
+				background-repeat: no-repeat;			
+				/*repeat-x, repeat-y, repeat*/
+			}
+			.attachment {	
+				background-attachment: fixed;
+				/*scroll(default), local, initial, inherit*/
+			}
+			.position {
+				background-position: center;
+			}
+			.all {						
+				height: 235px;	
+				background: url(bg.png) no-repeat center;
+			}
+			.mult {
+				background: url(bg.png),  url(star.png), url(star.png);
+				background-size: 30%, 10%, 10%;
+				background-position: center, right, left;
+				background-repeat: no-repeat;
+			}
+			.container {
+				margin: auto;
+				width: 800px;
+				padding: 10px;
+			}
+			.container div {
+				padding: 10px 0;
+				margin: 10px;
+				font-size: 36px;	
+				line-height: 5em;		
+				text-align: center;	
+				height: 240px;	
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container"> 
+			<div class="color">Simple color background</div>
+			<div class="image">Simple image background</div>
+			<div class="repeat image">Reapeat image property</div>
+			<div class="attachment image">Background attachment</div>
+			<div class="position repeat image">Different background position</div>
+			<div class="image repeat position">All together background</div>
+			<div class="all">Inline background</div>
+			<div class="mult position repeat">Multiple backgrounds</div>
+		</div>
+	</body>
+</html>

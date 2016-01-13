@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript operators</title>		
+	</head>
+	<body>
+	Press F12 to open DevTools
+	<table border="2">
+	 <caption>Operator priority</caption>
+	 <thead>
+	  <tr>
+	   <th>Operator type</th>
+	   <th>Individual operators</th>
+	  </tr>
+	 </thead>
+	 <tbody>
+	  <tr>
+	   <td>member</td>
+	   <td><code>. []</code></td>
+	  </tr>
+	  <tr>
+	   <td>call / create instance</td>
+	   <td><code>() new</code></td>
+	  </tr>
+	  <tr>
+	   <td>negation/increment</td>
+	   <td><code>! ~ - + ++ -- typeof void delete</code></td>
+	  </tr>
+	  <tr>
+	   <td>multiply/divide</td>
+	   <td><code>* / %</code></td>
+	  </tr>
+	  <tr>
+	   <td>addition/subtraction</td>
+	   <td><code>+ -</code></td>
+	  </tr>
+	  <tr>
+	   <td>bitwise shift</td>
+	   <td><code>&lt;&lt; &gt;&gt; &gt;&gt;&gt;</code></td>
+	  </tr>
+	  <tr>
+	   <td>relational</td>
+	   <td><code>&lt; &lt;= &gt; &gt;= in instanceof</code></td>
+	  </tr>
+	  <tr>
+	   <td>equality</td>
+	   <td><code>== != === !==</code></td>
+	  </tr>
+	  <tr>
+	   <td>bitwise-and</td>
+	   <td><code>&amp;</code></td>
+	  </tr>
+	  <tr>
+	   <td>bitwise-xor</td>
+	   <td><code>^</code></td>
+	  </tr>
+	  <tr>
+	   <td>bitwise-or</td>
+	   <td><code>|</code></td>
+	  </tr>
+	  <tr>
+	   <td>logical-and</td>
+	   <td><code>&amp;&amp;</code></td>
+	  </tr>
+	  <tr>
+	   <td>logical-or</td>
+	   <td><code>||</code></td>
+	  </tr>
+	  <tr>
+	   <td>conditional</td>
+	   <td><code>?:</code></td>
+	  </tr>
+	  <tr>
+	   <td>assignment</td>
+	   <td><code>= += -= *= /= %= &lt;&lt;= &gt;&gt;= &gt;&gt;&gt;= &amp;= ^= |=</code></td>
+	  </tr>
+	  <tr>
+	   <td>comma</td>
+	   <td><code>,</code></td>
+	  </tr>
+	 </tbody>
+	</table>
+
+	<script>		
+		var a, b,
+			condition;
+		
+		console.log('Basic operators');	
+		console.log('Basic assignment: a=5');
+		a = 5;
+		console.log(a);
+
+		console.log('Accessing object properties');	
+		console.log('document.body');
+		console.log(document.body);
+		console.log('document["body"]');
+		console.log(document["body"]);
+		console.log('Creating an instance');
+		console.log('new Number(5)');
+		console.log(new Number(5));
+		console.log('Arithmetic operators');	
+		console.log('5 + 10');
+		a = 5 + 10;
+		console.log(a);
+		console.log('10 - 5');
+		a = 10 - 5;
+		console.log(a);
+		console.log('5 - 10');
+		console.log(5 - 10);
+		console.log('10/2');
+		a = 10 / 2;
+		console.log(a);
+		console.log('5*5');
+		a = 5 * 5
+		console.log(a);
+		console.log('a%b - remainder');
+		a = 10 % 7
+		console.log(a);
+		console.log('++(increment)');
+		a++;
+		console.log(a);
+		console.log('--(decrement)');
+		a--;
+		console.log(a);
+
+		console.log('Other assignment operations');
+		a = 5;
+		console.log('+=');
+		a += 1;
+		console.log(a);
+		console.log('-=');
+		a -= 3;
+		console.log(a);
+		console.log('*=');
+		a *= 10;
+		console.log(a);
+		console.log('/=');
+		a /= 5;
+		console.log(a);
+		a = 10;
+		console.log('%=');
+		a %= 2;
+		console.log(a);
+		a = 10;
+
+		console.log('Comparison operators');
+		console.log('Relational operators');
+		console.log('1>0');
+		console.log(1>0);
+		console.log('21<66');
+		console.log(21<66);
+		console.log('5<=5');
+		console.log(5<=5);
+		console.log('10>=12');
+		console.log(10>=12);
+		console.log('Equality');
+		console.log('== operation');		
+		console.log(10 == 10);
+		console.log(10 == '10');
+		console.log(false == 0);
+		console.log(true == 10);
+		console.log('=== operation')
+		console.log(10 === 10);
+		console.log(10 === '10');
+		console.log(false === 0);
+		console.log(true === 10);
+
+		console.log('Logical operators');
+		console.log('! (logical NOT)');
+		console.log('!a');
+		console.log(!a);
+		console.log('!true');
+		console.log(!true);
+		console.log('!false');
+		console.log(!false);
+		console.log('!!a');
+		console.log(!!a);
+		console.log('!"5"');
+		console.log(!"5");
+		console.log('!undefined');
+		console.log(!undefined);
+		console.log('&& logical AND');
+		console.log('true && true');
+		console.log(true && true);
+		console.log('true && false');
+		console.log(true && false);
+		console.log('false && false');
+		console.log(false && false);
+		console.log('a && true');
+		console.log(a && true);
+		console.log('a && undefined');
+		console.log(a && undefined);		
+		console.log('a && !!undefined');
+		console.log(a && !!undefined);
+		console.log('Logical OR');
+		console.log('true || true');
+		console.log(true || true);
+		console.log('true || false');
+		console.log(true || false);		
+		console.log('false || false');
+		console.log(false || false);
+		console.log('a || true');
+		console.log(a || true);
+		console.log('a || undefined');
+		console.log(a || undefined);
+
+		console.log('Ternary operator (condition)');		
+		a = condition ? 4 : 1;
+		console.log(a);
+		condition = true;
+		a = condition ? 4 : 1;
+		console.log(a);
+		a = condition ? 4 : condition ? 9 : 3;
+		console.log(a);
+
+		console.log('Bitwise operators');
+		console.log('& - bitwise AND');
+		a = 10 & 3;
+		console.log(a);
+		console.log('| - bitwise OR');
+		a = 10 | 3;
+		console.log(a);
+		console.log('^ - bitwise XOR');
+		a = 10 ^ 3;
+		console.log(a);
+		console.log('<< - left shift');
+		a = 10 << 3;
+		console.log(a);
+		console.log('>> - sign-propagating right shift');
+		a = 15 >> 1;
+		console.log(a);
+		console.log('>>> - zero-fill right shift'); 
+		a = 16 >>> 2;
+		console.log(a);	
+
+		console.log('Bitwise assignment operators');
+		console.log('<<=');
+		a <<= 2;
+		console.log(a);
+		console.log('>>=');
+		a >>= 2;
+		console.log(a);
+		console.log('>>>=');
+		a >>>= 2;
+		console.log(a);
+		console.log('&=');
+		a &= 2;
+		console.log(a);
+		console.log('^=');
+		a ^= 2;
+		console.log(a);
+		console.log('|=');
+		a |= 2;
+		console.log(a);
+
+		console.log('Relational operators: in and instanceof');
+		console.log('"length" in new String("abc")');
+		console.log("length" in new String("abc"));
+		console.log('"document" in window');
+		console.log("document" in window);
+		console.log('b = {}; b instanceof Object');
+		b = {};
+		console.log(b instanceof Object);
+		b = 5;
+		console.log('b = 5; b instanceof Number');
+		console.log(b instanceof Number);
+
+		</script>
+
+	</body>
+</html>

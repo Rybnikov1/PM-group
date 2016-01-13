@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Box model</title>
+		<style>
+		.container {
+			background-color: #aaa;
+			display: inline-block;
+		}
+		.box_1 {
+			margin: 10px 50px 25px 45px;
+			padding: 30px;
+			border: 1px solid black;	
+		}
+		.box_2 {
+			margin: 20px;
+			padding: 10px 15px;
+			border: 1px solid black;	
+		}
+		.box_3 {
+			margin-top: 10px;
+			margin-left: 5px;
+			margin-bottom: 18px;
+			margin-right: 14px;
+			padding-left: 22px;
+			padding-right: 33px;
+			padding-top: 11px;
+			padding-bottom: 44px;
+			border-top: 3px solid red;
+			border-left: 5px solid white;
+		}
+		.content {
+			background-color: #ddd;
+			font-size: 28px;
+			width: 200px;
+			height: 150px;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="box_1">
+				<div class="content">
+					This is content
+				</div>
+			</div>
+		</div>
+		<div><br></div>
+		<div class="container">
+			<div class="box_2">
+				<div class="content">
+					This is content
+				</div>
+			</div>
+		</div>
+		<div><br></div>
+		<div class="container">
+			<div class="box_3">
+				<div class="content">
+					This is content
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

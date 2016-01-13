@@ -1,0 +1,16 @@
+.bg(@num) {
+    background+: url("img@{num}.png");
+}
+
+.class1 {
+    .bg(1);
+    .bg(2);
+}
+.transform(@t) {
+	transform+_: @t;
+}
+
+.class2 {
+	.transform(rotate(10deg));
+	.transform(scale(2));
+}

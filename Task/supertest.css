@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+.width {
+    width: 1110px;
+    margin: 0 auto;
+}
+.header {
+    width: 100%;
+    padding: 40px 0;
+    border-bottom: 1px solid #c3c3c3;
+}
+.header_logo {
+    float: left;
+}
+.header_audio {
+    float: right;
+}
+.header_logo, .header_audio  {
+    display: inline-block;
+}
+.header_logo h1 {
+    font-size: 40px;
+}
+.main_content {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.aside {
+    width: 25%;
+/*    display: inline-block;*/
+}
+.nav .nav_list {
+    list-style-type: none;
+}
+.nav_list li {
+    padding: 10px 20px
+}
+.nav_list li a {
+    padding: 5px 0;
+}
+.nav_list li a.active {
+    border-bottom: 1px solid black;
+}
+.nav_list li a:hover {
+    border-bottom: 1px solid black;
+} 
+
+/***  VIDEO  ***/
+
+.content {
+    width: 75%;
+/*    display: inline-block;*/
+}
+.video_container {
+    width: 500px;
+    height: 350px;
+    float: right;
+}
+
+/***  BLOCKS  ***/
+
+/*
+.blocks .cell {
+    height: 180px;
+    width: 150px;
+    float: left;
+    position: relative;
+    border: 3px solid rgba(0,0,0,.3);
+    box-shadow: -5px 0 8px rgba(0,0,0,.3);
+    background-color: grey;
+    transition: border .3s ease-in-out, box-shadow .3s ease-in-out, background-color .8s ease-in-out;
+}
+.blocks .cell:hover {
+    z-index: 999;
+    cursor: pointer;
+    border: 3px solid rgba(0,0,0,.9);
+    box-shadow: -10px 0 8px rgba(0,0,0,.3);
+}
+.cell:not(:first-child) {
+    margin-left: -50px;
+}
+.first:hover {
+    background-color: rgb(200,0,0);
+}
+.second:hover {
+    background-color: rgb(255,180,0);
+}
+.third:hover {
+    background-color: rgb(255,255,0);
+}
+.fourth:hover {
+    background-color: rgb(0,200,0);
+}
+*/
+
+/***  BLOCK  ***/
+
+.block {
+    height: 450px;
+    width: 580px;
+}
+.column_left {
+    width: 125px;
+    height: 440px;
+    float: left;
+}
+.column_left .big {
+    height: 250px;
+}
+.column_left .small {
+    height: 150px;
+    margin-top: 20px;
+}
+.column_right {
+    width: 375px;
+    float: left;
+}
+.left_big {
+    height: 295px;
+    width: 105px;
+    float: left;
+}
+.right_big {
+    height: 105px;
+    width: 230px;
+    float: left;
+}
+.middle {
+    width: 105px;
+    height: 170px;
+    float: left;
+}
+.bottom {
+    float: left;
+    width: 230px;
+    height: 105px;
+}
+.right {
+    float: right;
+    width: 105px;
+    height: 295px;
+}
+.cell {
+    background-color: #d3d3d3;
+    border-radius: 5px;
+    margin: 10px;
+}

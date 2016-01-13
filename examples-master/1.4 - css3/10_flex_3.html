@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flex</title>
+    <style>
+      div {
+        margin: 10px;
+      }
+      .container_1 {
+        display: inline-block;
+        width: 500px;
+        border: 1px solid black;
+      }
+
+      .container_1 .flex div {
+        width: 50px;        
+        border: 1px solid black;
+        background-color: lightblue;
+      }      
+      .container_1_inline {
+        display: inline-block;
+        border: 1px solid black;
+      }
+
+      .flex {
+        background-color: green;
+        display: flex;
+        border: 1px solid black;
+      }
+      .col {
+        flex-direction: column;
+      }
+      .row {
+        flex-direction: row;
+      }
+      .row_rev {
+        flex-direction: row-reverse;
+      }
+      .col_rev {
+        flex-direction: column-reverse;
+      }
+      .wrap {
+        flex-wrap: wrap;
+      }
+      .nowrap {
+        flex-wrap: nowrap;
+      }
+      .wrap_rev {
+        flex-wrap: wrap-reverse;
+      }
+      .flex_flow {
+        flex-flow: nowrap row;
+      }
+      .justify_start {
+        justify-content: flex-start;
+      }
+      .justify_end {
+        justify-content: flex-end;
+      }
+      .justify_center {
+        justify-content: center;
+      }
+      .justify_betw {
+        justify-content: space-between;
+      }
+      .justify_aro {
+        justify-content: space-around;
+      }
+      .align_start {
+        align-items: flex-start;
+      }
+      .align_center {
+        align-items: center;
+      }
+      .align_end {
+        align-items: flex-end;
+      }
+      .align_base {
+        align-items: baseline;
+      }
+      .align_stretch {
+        align-items: stretch;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container_1">
+       <div class="flex flex_flow justify_aro align_start">
+             <div style="height:120px">1</div>
+             <div style="height:78px">2</div>
+             <div style="height:90px">3</div>
+             <div style="height:100px">4</div>
+       </div>
+       <div class="flex flex_flow justify_aro align_end">
+             <div style="height:120px">1</div>
+             <div style="height:78px">2</div>
+             <div style="height:90px">3</div>
+             <div style="height:100px">4</div>
+       </div>
+       <div class="flex flex_flow justify_aro align_center">
+             <div style="height:120px">1</div>
+             <div style="height:78px">2</div>
+             <div style="height:90px">3</div>
+             <div style="height:100px">4</div>
+       </div>
+       <div class="flex flex_flow justify_aro align_base">
+             <div style="height:120px">1</div>
+             <div style="height:78px; padding:15px;">2</div>
+             <div style="height:90px; padding:7px;">3</div>
+             <div style="height:100px; padding:3px;">4</div>
+       </div>
+       <div class="flex flex_flow justify_aro align_stretch">
+             <div>1</div>
+             <div>2</div>
+             <div>3</div>
+             <div>4</div>
+       </div>
+    </div>
+
+  </body>
+</html>

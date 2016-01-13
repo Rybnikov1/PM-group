@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML5 semantics</title>
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-size: 100%;
+      list-style: none;
+    }
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
+     .header_block, .footer_block, .content_container {
+      width: 1280px;
+      margin: 0 auto;
+     }
+
+     .header_block {
+      height: 100px;
+      background: green;
+     }
+
+     .header_block-main_header {
+        margin: 10px;
+        color: #2f3121;
+        font-size: 2em;
+     }
+
+     .header_block-slogan {
+        color: #333;
+        font-weight: bold;
+        font-size: 1.1em;
+        text-indent: 2em;
+     }
+      .content_container {
+        min-height: 83%;
+      }
+     .nav_block, .aside_block {
+      width: 200px;
+      padding: 50px;
+     }
+
+     .nav_block, .aside_block, .article_block {
+      float: left;
+     }
+
+     .article_block {
+      width: 580px;
+      padding: 50px;
+     }
+     .article_block-header {
+       padding: 10px;
+       line-height: 2em;
+     }
+     .article_block-header-title {
+       font-size: 1.5em;
+     }
+     .article_block-header-subtitle {      
+       font-size: 1.3em;
+     }
+
+     .footer_block {
+      clear:both;
+      background: darkcyan;
+      position: relative;
+     }
+
+    </style>
+  </head>
+  <body>
+        <header class="header_block">
+          <h1 class="header_block-main_header">Welcome On Our Website!</h1>
+          <p class="header_block-slogan">Here is our logo and slogan.</p>
+        </header>
+     
+     <div class="content_container">
+    <nav class="nav_block">
+        <header class="nav_block-header">
+            <h2>Choose Your Interest</h2>
+        </header>
+        <ul class="nav_block-menu">
+            <li class="nav_block-menu-item">Menu 1</li>
+            <li class="nav_block-menu-item">Menu 2</li>
+            <li class="nav_block-menu-item">Menu 3</li>
+        </ul>
+    </nav>
+     
+    <article class="article_block">
+        <header class="article_block-header">
+            <h1 class="article_block-header-title">Title of Article</h1>
+            <h2 class="article_block-header-subtitle">Subtitle of Article</h2>
+        </header>
+         
+        <section>
+            <h3>First Logical Part (e.g. "Theory")</h3>
+            <p>Paragraph 1 in first section</p>
+             
+            <h4>Some Other Subheading in First Section</h4>
+            <p>Paragraph 2 in first section</p>
+        </section>
+         
+        <figure>
+
+        <img src="http://demosthenes.info/assets/images/thumbnails/homer-simpson.svg">
+
+        <figcaption>Figure Caption</figcaption>
+     
+        <footer>
+            <h4>Author Bio</h4>
+            <p>Paragraph in Article's Footer</p>
+        </footer>
+     
+    </article>
+     
+    <aside class="aside_block">
+         
+        <h2>Get To Know Us Better</h2>
+         
+        <section>
+            <h3>Popular Posts</h3>
+            <ul>...</ul>
+        </section>
+         
+        <section>
+            <h3>Partners</h3>
+            <ul>...</ul>
+        </section>
+         
+        <section>
+            <h3>Testimonials</h3>
+            <ul>...</ul>
+        </section>
+     
+    </aside>
+     </div>
+    <footer class="footer_block">
+        <ul>
+            <li>Copyright</li>
+            <li>Social Media Links</li>
+        </ul>
+    </footer>  
+  </body>
+</html>

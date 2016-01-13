@@ -1,0 +1,8 @@
+.loop (@i, @lim, @step, @base) when (@i < @lim) {
+    @{base}-@{i} {
+        width:@i;
+        height: @i;
+    }
+    .loop (@i+@step, @lim, @step, @base);
+}
+.loop(0, 10, 2, box);

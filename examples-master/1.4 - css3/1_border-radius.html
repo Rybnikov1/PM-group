@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+            div {
+                width: 200px;
+                height: 200px;
+                background-color: cadetblue;
+                margin: 10px;
+            }
+            .simple_round {
+                border-radius: 5px;
+            }
+            .different_oneline {
+                border-radius: 15px 50px 3px 20px;
+            }
+            .different {
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 52px;
+                border-top-left-radius: 19px;
+                border-top-right-radius: 36px;
+            }
+            .circle {
+                border-radius: 100px;
+            }
+            .triangle {
+                height: 0;
+                width: 0;
+                background-color: transparent;
+                border-left: 40px solid transparent;
+                border-right: 150px solid transparent;
+                border-bottom:  180px solid cadetblue;
+            }
+            .trileft {
+                height: 0;
+                width: 0;
+                background-color: transparent;
+                border-left: 150px solid cadetblue;
+                border-top: 150px solid transparent;
+                border-bottom:  150px solid transparent;
+            }
+		</style>
+	</head>
+	<body>
+        <div class="simple_round"></div>
+        <div class="different_oneline"></div>
+        <div class="different"></div>
+        <div class="circle"></div>
+        <div class="triangle"></div>
+        <div class="trileft"></div>
+
+	</body>
+</html>

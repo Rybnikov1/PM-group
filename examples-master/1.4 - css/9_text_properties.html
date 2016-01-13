@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Text properties</title>
+		<style>
+			.color-green {
+				color:green;
+			}
+			.color-red {
+				color:red;
+			}
+			.color-hex {
+				color: #2a02a8;
+			}
+			.align-center {
+				text-align: center;
+				/*left, right, justify*/
+			}
+			.align-right {
+				text-align: right;
+			}
+			.align-justify {
+				text-align: justify;
+			}
+			.underline {
+				text-decoration: underline;
+				/*overline, line-through, none*/
+			}
+			.overline {
+				text-decoration: overline;
+			}
+			.through {
+				text-decoration: line-through;
+			}
+			.uppercase {
+				text-transform: uppercase;
+				/*capitalize, lowercase*/
+			}
+			.capitalize {
+				text-transform: capitalize;
+			}
+			.lowercase {
+				text-transform: lowercase;
+			}
+			.indent {
+				text-indent: 2em;
+			}
+			.block {
+				border: 1px solid black;
+				margin: 10px;
+			}
+			.align {
+				width: 200px;
+			}
+			.shadow {
+
+			}
+			/*
+			text-overflow
+			text-shadow
+			*/
+		</style>
+	</head>
+	<body>	
+		<div class="block">
+			<p>Simple text</p>
+		</div>
+
+		<div class="block">
+			<p class="color-green">Text with different color</p>
+			<p class="color-red">Text with different color</p>
+			<p class="color-hex">Text with different color</p>
+		</div>
+
+		<div class="block align">
+			<p class="align-right">Text, aligned to right</p>
+			<p class="align-center">Text, aligned to center</p>
+			<p class="align-justify">Justify aligns text to fill all the space
+			in a line completely, so it will look more smooth on the sides</p>
+		</div>
+
+		<div class="block">
+			<p class="underline">Underlineded text</p>
+			<p class="overline">Overlined text</p>
+			<p class="through">Line-through text</p>
+		</div>
+
+		<div class="block">
+			<p class="indent">Text indent</p>
+		</div>
+
+		<div class="block">
+			<p class="uppercase">This text Will Be in uppercase letters</p>
+			<p class="lowercase">THIS TEXT will be in LOWERCASE LETTERS</p>
+			<p class="capitalize">this text will have all words start with capital letters</p>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+@bordercolor: black;
+#someid {
+	background: #aaa;
+}
+
+.border() {
+	border: 1px solid @bordercolor;
+}
+
+.hover-mix() {
+	background: #789;
+}
+
+.button {
+	.border;
+	#someid;
+	border-radius: 3px;
+	@bordercolor: green;
+	width: 200px;
+	height: 50px;
+	&:hover {
+		.hover-mix;
+	}
+}
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Basic css syntax</title>
+		<!-- This way we tell the browser to apply styling from 1.4.1 - basic.css file
+		and all the rules will be applied to the matching selectors.
+		And the same will happen if we link this css file to a different document-->
+		<link rel="stylesheet" type="text/css" href="1_basics.css">
+
+		<!-- this way we directly specify css rules in a special tag. we still need to use selectors< because 
+		these styles are applied to the whole document (bot only this one) -->
+		<style>
+			/*
+			This is a comment in css syntax;
+			It is different from html;
+			Inside this <style> tag only css rules apply
+			*/
+			b {
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<p>This text is using styles for <b>all p elements</b></p>
+		<p style="color:blue;">This paragraph also uses inline styles</p>
+	</body>
+</html>

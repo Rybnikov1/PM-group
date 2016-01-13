@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flex</title>
+    <style>
+      div {
+        margin: 10px;
+      }
+      .container_1 {
+        display: inline-block;
+        width: 500px;
+        border: 1px solid black;
+      }
+
+      .container_1 > div{
+        height: 300px;
+      }
+
+      .container_1 .flex div {
+        width: 50px;   
+        height: 50px;     
+        border: 1px solid black;
+        background-color: lightblue;
+      }      
+
+      .flex {
+        background-color: green;
+        display: flex;
+        border: 1px solid black;
+      }
+      .col {
+        flex-direction: column;
+      }
+      .row {
+        flex-direction: row;
+      }
+      .row_rev {
+        flex-direction: row-reverse;
+      }
+      .col_rev {
+        flex-direction: column-reverse;
+      }
+      .wrap {
+        flex-wrap: wrap;
+      }
+      .nowrap {
+        flex-wrap: nowrap;
+      }
+      .wrap_rev {
+        flex-wrap: wrap-reverse;
+      }
+      .flex_flow {
+        flex-flow: wrap row;        
+      }
+      .justify_start {
+        justify-content: flex-start;
+      }
+      .justify_end {
+        justify-content: flex-end;
+      }
+      .justify_center {
+        justify-content: center;
+      }
+      .justify_betw {
+        justify-content: space-between;
+      }
+      .justify_aro {
+        justify-content: space-around;
+      }
+      .align_start {
+        align-items: flex-start;
+      }
+      .align_center {
+        align-items: center;
+      }
+      .align_end {
+        align-items: flex-end;
+      }
+      .align_base {
+        align-items: baseline;
+      }
+      .align_stretch {
+        align-items: stretch;
+        height: 300px;
+      }
+      .content_start {
+        align-content: flex-start;
+      }
+      .content_end {
+        align-content: flex-end;
+      }
+      .content_center {
+        align-content: center;
+      }
+      .content_betw {
+        align-content: space-between;
+      }
+      .content_aro {
+        align-content: space-around;
+      }
+      .content_stretch {
+        align-content: stretch;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container_1">
+       <div class="flex flex_flow justify_start content_start align_base">
+             <div>1</div>
+             <div>2</div>
+             <div>3</div>
+             <div>4</div>
+             <div>1</div>
+             <div>2</div>
+             <div>3</div>
+             <div>4</div>
+             <div>1</div>
+             <div>2</div>
+             <div>3</div>
+             <div>4</div>
+       </div>
+       <div class="flex flex_flow justify_start content_end align_base">
+             <div>1</div>
+             <div>2</div>
+             <div>3</div>
+             <div>4</div>
+             <div>1</div>
+             <div>2</div>
+             <div>3</div>
+             <div>4</div>
+             <div>1</div>
+             <div>2</div>
+             <div>3</div>
+             <div>4</div>
+       </div>
+       <div class="flex flex_flow justify_start content_center align_base">
+             <div>1</div>
+             <div>2</div>
+             <div>3</div>
+             <div>4</div>
+             <div>1</div>
+             <div>2</div>
+             <div>3</div>
+             <div>4</div>
+             <div>1</div>
+             <div>2</div>
+             <div>3</div>
+             <div>4</div>
+       </div>
+       <div class="flex flex_flow justify_start content_aro align_base">
+             <div>1</div>
+             <div>2</div>
+             <div>3</div>
+             <div>4</div>
+             <div>1</div>
+             <div>2</div>
+             <div>3</div>
+             <div>4</div>
+             <div>1</div>
+             <div>2</div>
+             <div>3</div>
+             <div>4</div>
+       </div>
+       <div class="flex flex_flow justify_start content_betw align_base">
+             <div>1</div>
+             <div>2</div>
+             <div>3</div>
+             <div>4</div>
+             <div>1</div>
+             <div>2</div>
+             <div>3</div>
+             <div>4</div>
+             <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+       </div>  
+       <div class="flex flex_flow justify_start content_stretch align_base">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+      </div>
+    </div>
+
+  </body>
+</html>

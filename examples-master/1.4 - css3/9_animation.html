@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<style>
+		.run {
+			background-image: url(http://blaiprat.github.io/jquery.animateSprite/img/scottpilgrim_multiple.png);
+			background-position: -5px 0;
+			background-repeat: no-repeat;
+			width: 107px;
+			height: 150px;
+			animation: run 1s steps(7) infinite;
+			
+		}
+
+		.back {
+			background-image: url(http://blaiprat.github.io/jquery.animateSprite/img/scottpilgrim_multiple.png);
+			background-position: -753px -140px;
+			background-repeat: no-repeat;
+			width: 107px;
+			height: 150px;
+			animation: back 1s steps(7) infinite;			
+		}
+		.left {
+			float: left;
+			width: 200px;
+		}
+		.right {
+			position: relative;
+			margin-left: 200px;
+		}
+		
+		.moving {
+			width: 50px;
+			height: 50px;
+			position: relative;
+			background-color: green;
+			animation: fromto 3s;
+			animation-delay: 1s;
+			animation-fill-mode: both;			
+		}
+		.square {
+			width: 50px;
+			height: 50px;
+			position: relative;
+			background-color: green;
+/*			-webkit-animation: ;
+			-o-animation: ;*/
+			animation: square 5s;
+			animation-iteration-count: 6;
+		}
+		@keyframes fromto {
+			from {
+				left:0;
+				background-color: green;
+			}
+			to {
+				left: 400px;
+				background-color: red;
+			}
+		}
+		@keyframes square {
+			0% {
+				top:0;
+				left:0;
+			}
+
+			25% {
+				top:0;		
+				left: 400px;				
+			}
+
+			50% {
+				top:400px;	
+				left:400px;			
+			}
+
+			75% {
+				top:400px;	
+				left:0;
+			}
+
+			100%{
+				top:0;
+			}
+		}
+		@keyframes run {		
+			100% {
+				background-position: -750px 0;
+			}
+		}
+		@keyframes back {
+			100% {
+				background-position: -5px -140px;
+			}
+		}
+	</style>
+	<body>
+	<div class="left">
+		<div class="run"></div>
+		<div class="back"></div>
+	</div>
+	<div class="right">
+		<div class="moving"></div>
+		<div class="square"></div>
+	</div>
+	</body>
+</html>
+
+
+
+

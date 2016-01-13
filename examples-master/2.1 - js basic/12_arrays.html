@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript arrays</title>
+		<script>
+		var arr;
+			// possible but not recomended
+			arr = new Array();
+			console.log(arr);
+			arr = new Array(8);
+			console.log(arr);
+			arr = new Array(10, 20, 30);
+			// recomeneded - literal syntax;
+			arr = [];
+			console.log(arr);
+			arr = [10];
+			console.log(arr);
+			arr = [10, 20, "blabla", NaN, true, null];
+			console.log(arr);
+			arr = [[10, 20], true, ['bb', 'aa', [1, 2, 3]]]	;
+			console.log(arr);	
+			console.log("Last array length: " + arr.length);
+			console.log("Last arrays first element - aray - length: " + arr[0].length);
+			console.log(arr["0"]);			
+		</script>
+	</head>
+	<body>
+	<br>Press F12 to open DevTools
+	</body>
+</html>

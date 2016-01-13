@@ -1,0 +1,71 @@
+@color: "#abf";
+@var1: 10px;
+@var2: 20px;
+@var3: 1.23412323cm;
+@var4: 3em;
+@rule: {
+	background-color: magenta;
+};
+.color {
+	color: color(@color);
+}
+.img {	
+	padding: image-size("img.png");
+}
+.bg {
+	background: url("img.png");
+	width: image-width("img.png");
+	height: image-height("img.png");
+}
+.convert {
+	width: convert(10px, "mm");
+	transition: all convert(3.86s, "ms");
+}
+
+.math {
+	margin: max(@var1, @var2);
+	text-indent: ceil(@var3);
+	line-height: unit(unit(floor(@var3)), get-unit(@var3));
+	width: percentage(unit(round(@var3, 4)));
+	padding: min(@var1, @var2);
+}
+
+.type when (isnumber(@var1)){
+	.subtype when (iscolor(color(@color))) {
+		// NOT a valid CSS
+		isurl: isurl("../aa.png");
+		iskeyword: iskeyword(green);
+		iskeyword: iskeyword(absolute);
+		ispixel: ispixel(@var2);
+		// isem(), ispercentage
+		isunit: isunit(@var3, cm);
+		isruleset: isruleset(@rule);
+	}
+}
+@color1: rgb(22, 45, 212);
+@color2: rgba(123, 32, 52, 0.5);
+@color3: argb(rgba(123, 32, 52, 0.5));
+.colors {
+	color: @color1;
+	color: @color2;
+	color: @color3;
+	//hsl(), hsla(), hsv(), hsva()
+}
+.c_chanels {
+	opacity: alpha(@color2);
+	.item when (luma(@color1) > 50%) {
+		color: darken(@color1, 20%);
+	}
+}
+.color_operations {
+	&:hover {
+		color: lighten(saturate(@color2, 10%), 10%);
+		background-color: fadein(@color2, 20%);
+	}
+	background-color: mix(#ff11aa, #0fa233, 30%);
+	color: tint(@color1, 30%);
+	// shade()
+	border-top-color: greyscale(@color1);
+	// contrast()
+}
+// color-blending

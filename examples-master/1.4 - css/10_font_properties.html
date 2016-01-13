@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Font properties</title>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,300,100,300italic,100italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+		<style>
+			.arial {
+				font-family: Arial, serif;
+			}
+			.roboto {
+				font-family: 'Roboto', sans-serif
+			}
+			.sans-serif {
+				font-family: sans-serif;
+			}
+			.italic {
+				font-style: italic;
+			}
+			.oblique {
+				font-style: oblique;
+			}
+			.small-caps {
+				font-variant: small-caps;
+			}
+			.size {
+				/*this defines the size of a font*/
+				font-size: 22px;
+			}
+		</style>
+	</head>
+	<body>
+		<p class="arial">This text uses Arial font</p>
+		<p class="roboto">This text is using an external Roboto font</p>
+		<p class="italic arial">This is italic arial text</p>
+		<p class="oblique arial">This is oblique text with arial font</p>
+		<p class="small-caps">This is default text with small-caps variant</p>
+		<p class="size">This text has 22px font size</p>
+		<p class="size roboto">Font weight can have numerical values - 
+			<span style="font-weight: 100">100</span>,
+			<span style="font-weight: 200">200</span>, 
+			<span style="font-weight: 300">300</span> to 
+			<span style="font-weight: 800">800</span>
+			but not all fonts support all of these values by default</p>
+		<p class="size roboto">You can also use normal, 
+		<span style="font-weight:lighter">lighter, </span>
+		<span style="font-weight:bold">bold</span> and 
+		<span style="font-weight:bolder">bolder</span> values</p>
+		
+	</body>
+</html>

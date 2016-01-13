@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Combinators</title>
+		<style>
+		/*We've seen this before. This means all paragraphs inside a div, on any level*/
+		div p {
+			font-size: 18px;
+		}
+		/*This selector applies to a first p element that goes after div, on the same level (inside the same tag)*/
+		div + p {
+			color: red;
+		}
+		/*This one is to select all p elemnts that are inside a div tag, but not on a deeper level
+		Only those p, that are direct children of a div*/
+		div > p {
+			text-indent: 50px;
+		}
+		/*This selector defines all p elements on the same level as div*/
+		div ~ p {	
+			font-weight: 700;
+		}
+
+		/*It works for all types of selectors. We can use classes, ids, we can group them, so on*/
+		.first ~ p {
+			text-decoration: underline;
+		}
+		.first p {
+			color: blue;
+		}		
+		</style>
+	</head>
+	<body>
+		<div class="first">
+			<p>A simple paragraph inside one div</p>
+		</div>
+		<p>A paragraph next to a div, same level</p>
+		<p>A paragraph on the same level</p>
+		<div>
+			<p>Another paragraph inside a div. This one is first</p>
+			<div>
+				<span><p>A paragraph inside two divs and a span. It only usese the general rule "div p". 
+				It is not a first child of div (its span), it is not a direct child too, beacuse it's parent is span</p></span>
+				<p>A paragraph inside two divs. It is not a first child.</p>
+			</div>
+			<p>Also a paragraph inside one div</p>
+		</div>
+		<p>Another paragraph on the same level</p>
+	</body>
+</html>

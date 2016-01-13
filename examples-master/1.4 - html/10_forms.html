@@ -1,0 +1,64 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<title>Forms</title>
+	</head>
+	<body>
+		<h1>Form</h1>
+		<form>
+			<fieldset>
+				<legend>An awesome form</legend>
+				<label for="name">Name:</label>
+				<input type="text" id="name" placeholder="name">
+
+				<br>
+
+				<label for="pass">Password:</label>
+				<input type="password" id="pass">
+
+				<br>
+				
+				<label><input type="checkbox" value="chk1" name="chk">Click me</label>
+				<label><input type="checkbox" value="chk2" name="chk">Or me</label>
+				<label><input type="checkbox" value="chk3" name="chk">Or all of us</label>				
+				<input type="checkbox" id="chk4" value="chk4" name="chk">
+				<label for="chk4">This is also right</label>
+
+				<input type="hidden">
+				
+				<br>
+
+				<label><input type="radio" name="radio" value="radio1">Select me</label>
+				<label><input type="radio" name="radio" value="radio2">Or me</label>
+				<label><input type="radio" name="radio" value="radio3">But only one</label>
+
+				<br>
+
+				<label for="file"></label>
+				<input type="file" id="file">
+
+				<br>
+				<label for="sel">Dropdown</label>
+				<select id="sel">
+					<option>Option 1</option>
+					<option>Option 2</option>
+					<option>Option 3</option>
+					<option>Option 4</option>
+				</select>
+
+				<hr>
+				<input type="reset">
+				<input type="submit">
+
+				<hr>
+				<h2>HTML5 input types</h2>
+				<label>Color: <input type="color"></label><br>
+				<label>Date: <input type="date"></label><br>
+				<label>Email: <input type="email" placeholder="example@mail.com"></label><br>
+				<label>Number: <input type="number" value="-100"></label><br>
+				<label>Time: <input type="time"></label><br>
+				<label>Range: <input type="range"></label><br>
+			</fieldset>
+		</form>		
+	</body>
+</html>

@@ -1,0 +1,43 @@
+.mixin (@a) when (@a > 500px) {
+  background-color: black;
+}
+.mixin (@a) when (@a < 500px) {
+  background-color: white;
+}
+.mixin (@a) {
+  width: @a;
+}
+
+.class1 { 
+    .mixin(200px) 
+}
+.class2 { 
+    .mixin(600px) 
+}
+
+.mixguard (@bar) when (iscolor(@bar)) {
+    color: @bar;
+}
+.mixguard (@bar) when (isnumber(@bar)) and (@bar < 50px) {
+    margin: @bar;
+}
+
+.mixguard (@bar) when (isnumber(@bar)) and (@bar > 50px) {
+    left: @bar;
+}
+.mixguard (@bar) when (default()) {
+    @{bar}: 0;
+}
+
+.someclass {
+    .mixguard(#cde);
+}
+.someclass2 {
+    .mixguard(20px);
+}
+.someclass3 {
+    .mixguard(40cm);
+}
+.someclass4 {
+    .mixguard(margin);
+}

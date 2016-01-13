@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML5 form attributes and input types</title>
+    <style>
+      div {
+        margin:10px;
+      }
+    </style>
+  </head>
+  <body>
+      <form>
+        <div><label>Step, min, max <input type="number" max="100" min="0" step="5"></label></div>
+        <div><label>Pattern, placeholder, multiple  <input type="email" pattern="\S+@\S+\.\S+" placeholder="name@host.com" multiple list="maillist"></label><input type="submit" formtarget="_blank"><!-- _self, _top, _parent -->
+  
+        </div>
+        <datalist id="maillist">          
+            <option value="aaa@bbb.ccc"></option>
+            <option value="aaa@ccc.ddd"></option>
+            <option value="bbb.fff@eee.ggg"></option>
+        </datalist>
+        </form>
+        <form>
+        <div><label>Color <input type="color"></label></div>
+        <div><label>Date <input type="date"></label></div>           
+        <div><label>Datetime <input type="datetime-local"></label></div>
+        <div><label>Time <input type="time"></label></div>
+        <div><label>Month <input type="month"></label></div> 
+        <div><label>Week <input type="week"></div>       
+        <div><label>Range <input type="range"></div>
+        <div><label>Search <input type="search"></div>
+        <div><label>Tel <input type="tel" pattern="\+{1}\d{3}\(\d{2,4}\)\d{5,7}" value="+380()"><input type="submit"></div>
+        <div><label>Url <input type="url"></div>
+      </form>
+  </body>
+</html>

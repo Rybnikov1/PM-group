@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Selector priority and specificity</title>
+		<style>
+			/*lowest specificity, a tag selector*/
+			p {
+				color: #aaa;
+			}
+			/*specificity is 2 - a tag inside a tag, a bit more specific*/
+			div p {
+				color: #888;
+			}
+			/*A class selector, specificity - 10*/
+			.first {
+				color: #666;
+				font-size: 20px;
+			}
+			/*specificity = */
+			div .second {
+				color:yellow;
+			}
+			/*specificity is higher, but still not enough. Text is
+			not green for a p with two classes*/
+			div .second.first {
+				color: green;
+				font-size: 15px;
+			}
+			/*specificity 100*/
+			#abc: {
+				font-weight: 400;
+			}
+			/*specificity is also 100, it is calculated for each
+			group item separately*/
+			#abc, #efg {
+				color:#333;
+				font-weight: bold;				
+			}
+			/*This selector has high specificity, beacuse it ivolves an id
+			specificity = 110*/
+			#cde.first {
+				color: #000;
+				font-size: 40px;
+			}
+			/*specificity 11*/
+			.container p {
+				color:#af1;
+			}
+			/*specificity = 120*/
+			#cde +.container .second {
+				color: magenta;
+			}
+			/*specificity = 111*/
+			#cde + .container  p {
+				color:blue;
+			}
+
+		</style>
+	</head>
+	<body>
+		<h1>There is a lot of overlapping styles here
+		<br>Let's find out why it all looks this way</h1>
+		<p>A paragraph without class or id, on the top level</p>
+		<p class="first">A paragraph with a class</p>
+		<p id="abc">A paragraph witn an id</p>
+		<p id="cde" class="first">A paragraph with both a class and an id</p>
+		<div class="container">
+			<p>A simple paragraph inside a div with a class</p>
+			<p class="second">Paragraph with a class inside a div</p>
+			<p class="second first">A paragraph with two classes, still inside a div</p>	
+			<p id="efg">A paragraph witn an id</p>
+			<p style="color:red">An inline style</p>
+		</div>
+	</body>
+</html>

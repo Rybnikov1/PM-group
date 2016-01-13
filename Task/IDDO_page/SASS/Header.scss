@@ -1,0 +1,73 @@
+/*Buttons style*/
+@mixin make-btn($padding, $color, $brd-color, $brd-rad){
+    padding: $padding $padding*2;
+    color: $color;
+    border: 2px solid $brd-color;
+    border-radius: $brd-rad;
+    &:hover {
+        background: $color;
+        color: lighten($color, 100%);
+    }
+}
+.header {
+    background: $header-color;
+    color: $main-text-color;
+
+    .header-container{
+        line-height: 80px;
+    }
+    .header__logo{
+        font-family: $main-font-bold;
+        font-weight: 800;
+        font-size: $main-font-size+22px;
+        float: left;
+    }
+    .header__navigation {
+        float: left;
+        margin-left: 130px;
+        .nav-item {
+            padding-right: 40px;
+            text-decoration: none;
+            color: $main-text-color;
+            font-size: $main-font-size+3px;
+            text-transform: capitalize;
+            &:hover {
+                color: $buttons-text-color;
+            }
+        }
+    }
+    .header__sign {
+        float: right;
+        .header__sign__button {
+           @include make-btn(10px, $buttons-text-color, $buttons-text-color, 15px);
+            text-decoration: none;
+            font-size: $main-font-size+3px;
+            text-transform: capitalize;
+        }
+    }
+}
+
+.header__introduce-video {
+    background: $content-video-background-color;
+    color: $main-text-color;
+    padding: 300px 0;
+
+}
+.header__introduce-video-container {
+    .click {
+        display: inline-block;
+        padding: 20px 0 0 50px;
+    
+        p {
+            font-size: $main-font-size+54px;
+            font-weight: 100;
+        }
+        a {
+            text-decoration: none;
+            font-size: $main-font-size+3px;
+            text-transform: capitalize;
+            color: $buttons-text-color;
+        }
+    }
+    
+}

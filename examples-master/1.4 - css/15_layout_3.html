@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Layout: display and visibility</title>
+		<style>
+			.block {
+				display: block;
+			}
+			.block div {
+				background-color: #299EC4;
+			}
+			.block div, .inline-block div {
+				width: 100px;
+				height: 100px;
+				margin: 5px;
+			}
+			.inline {
+				border: 2px dotted gray;
+			}
+			.inline div {
+				background-color: #81CC68;
+				display: inline;
+				border: 1px solid black;
+				font-size: 32px;
+			}
+			.inline-block {
+
+			}
+			.inline-block div {
+				display: inline-block;
+				background-color: #764985;
+			}
+			.display_none {
+				display: none;
+			}
+			.visibility_hidden {
+				visibility: hidden;
+			}
+
+		</style>
+	</head>
+	<body>
+		<h2>Block</h2>
+		<div class="block">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<h2>Inline</h2>
+		<div class="inline">
+			<div>Some text</div>
+			<div>More text</div>
+			<div>More text</div>
+		</div>
+		<h2>Inline-block</h2>
+		<div class="inline-block">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<h2>Visibility</h2>
+		<div class="block">
+			<div></div>
+			<div class="display_none">This element is not displayed at all</div>
+			<div></div>
+			<div></div>
+			<div class="visibility_hidden">This element is not visible, but present in the layout</div>
+			<div></div>
+		</div>
+	</body>
+</html>

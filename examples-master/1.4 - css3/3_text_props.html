@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+		<style>
+            div {
+                padding: 10px;
+                width: 500px;
+                margin: 20px;
+                border: 1px solid black;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            .overflow_clip {
+                text-overflow: clip;
+            }
+            .overflow_elipsis {
+                text-overflow: ellipsis;
+            }
+            .wrap_break {
+                word-wrap: break-word;
+                word-break: break-all;
+                white-space: normal;
+            }
+            .wrap_keep {
+                word-wrap: break-word;
+                word-break: keep-all;
+                white-space: normal;
+            }
+            .shadow {
+                text-shadow: 2px 2px 3px red;
+            }
+		</style>
+	</head>
+	<body>
+        <div class="overflow_clip">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+        </div>
+        <div class="overflow_elipsis">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+        </div>    
+        <div class="wrap_break">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+        </div>    
+        <div class="wrap_keep">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+        </div>    
+        <div class="shadow">
+            Sed ut perspiciatis unde omnis
+        </div>
+	</body>
+</html>

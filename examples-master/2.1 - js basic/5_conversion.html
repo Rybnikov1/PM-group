@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript type conversion</title>
+		<script>
+		var number = 5,
+			string = 'text',
+			numberString = '10',
+			boolTrue = true,
+			boolFalse= false;
+
+			console.log('number + string');
+			console.log(number + string);
+			console.log('numberString + number');
+			console.log(numberString + number);
+			console.log('number + numberString');
+			console.log(number + numberString);
+			console.log('number + Number(numberString)');
+			console.log(number + Number(numberString));
+			console.log('number + parseInt(numberString)');
+			console.log(number + parseInt(numberString));			
+			console.log('number + parseInt(numberString, 10)');
+			console.log(number + parseInt(numberString, 10));			
+			console.log('number + parseInt(numberString, 8)');
+			console.log(number + parseInt(numberString, 8));			
+			console.log('boolTrue + string');
+			console.log(boolTrue + string);			
+			console.log('number + boolTrue');
+			console.log(number + boolTrue);			
+			console.log('number * boolFalse');
+			console.log(number * boolFalse);
+			console.log('typeof ""+number');
+			console.log(typeof ("" + number));
+
+		</script>
+	</head>
+	<body>
+	Press F12 to open DevTools
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lists tyle properties</title>
+		<style>
+		ul {
+			list-style-type: circle;
+			list-style-position: inside;
+			list-style-image: url(list.png);
+		}
+		li {
+			font-size: 22px;
+		}
+		ol {
+			list-style: lower-greek outside;
+		}
+		div {
+			width: 250px;
+		}
+		</style>
+	</head>
+	<body>
+		
+		<h2>Numbered list</h2>
+		<div>
+			<ol>
+				<li>Item 1. Text is inside the list</li>
+				<li>Item 2. Text doesnt intersect with marker</li>
+				<li>Item 3</li>
+			</ol>
+		</div>
+		<h2>Markered list</h2>
+		<div>
+			<ul>
+				<li>Item 1. Text is outside, on the same level as the marker</li>
+				<li>Item 2. There is no indentation on the second line</li>
+				<li>Item 3</li>
+			</ul>
+		</div>
+	</body>
+</html>

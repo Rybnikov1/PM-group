@@ -1,0 +1,588 @@
+/*Content services*/
+@mixin spritebox($left, $top, $height, $width){
+  background-image: url(../img/spritebox-sprite.png);
+  background-repeat: no-repeat;
+  background-position: $left $top;
+  height: $height;
+  width: $width;
+}
+
+.content__services {
+    background: $buttons-text-color;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    color: $main-text-color;
+}
+    .headline {
+        font-size: $main-font-size+56px;
+        font-family: $main-font-bold;
+        text-transform: uppercase;
+        border-bottom: 10px solid $main-text-color;
+        line-height: 1;
+    }
+
+[class*='feature__icon'] {
+    float: left;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.feature__icon-1 {
+    @include spritebox(-100px, -129px, 100px, 100px);
+    margin-bottom: 60px;
+}
+.feature__icon-2 {
+    @include spritebox(-129px, -0px, 100px, 100px);
+    margin-bottom: 60px;
+}
+
+.feature__icon-3 {
+    @include spritebox(-0px, -129px, 100px, 100px);
+}
+
+.feature__icon-4 {
+    @include spritebox(-229px, -0px, 100px, 100px);
+}
+
+.feature__content {
+
+    h3 {
+        font-size: $main-font-size;
+        font-family: $main-font-bold;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        
+    }
+    p {
+        font-size: $main-font-size - 4px;
+        font-family: $main-font-thin;
+        line-height: 1.5;
+       
+    }
+}
+
+/*Content services small*/
+.content__services__small {
+    background: $main-text-color;
+}
+.content__services__small__item {
+      height: 150px;
+    &:nth-child(1) {
+        background: url($img-folder+"lightbulb_icon.png") no-repeat center center;
+        &:hover {
+            background: $darken-text-color url($img-folder+"lightbulb_icon.png") no-repeat center center;
+            cursor: pointer;
+    }
+    }
+    &:nth-child(2) {
+        background: url($img-folder+"earth_icon.png") no-repeat center center;
+        &:hover {
+            background: $darken-text-color url($img-folder+"earth_icon.png") no-repeat center center;
+            cursor: pointer;
+    }
+    }
+    &:nth-child(3) {
+        background: url($img-folder+"photocam_icon.png") no-repeat center center;
+        &:hover {
+            background: $darken-text-color url($img-folder+"photocam_icon.png") no-repeat center center;
+            cursor: pointer;
+    }
+    }
+    &:nth-child(4) {
+        background: url($img-folder+"wrench_icon.png") no-repeat center center;
+        &:hover {
+            background: $darken-text-color url($img-folder+"wrench_icon.png") no-repeat center center;
+            cursor: pointer;
+    }
+    }
+    &:nth-child(5) {
+        background: url($img-folder+"mic_icon.png") no-repeat center center;
+        &:hover {
+            background: $darken-text-color url($img-folder+"mic_icon.png") no-repeat center center;
+            cursor: pointer;
+    }
+    }
+    &:nth-child(6) {
+        background: url($img-folder+"cash_icon.png") no-repeat center center;
+        &:hover {
+            background: $darken-text-color url($img-folder+"cash_icon.png") no-repeat center center;
+            cursor: pointer;
+    }
+    }
+}
+
+/*Content portfolio*/
+.content__portfolio {
+    background: $content-our-works-background-color;
+}
+.content__portfolio_headline {
+    margin: 100px 0 30px 0;
+    h2{
+        @extend .headline;
+        color: $headings-text-color;
+        border-color: $headings-text-color;
+    }
+}
+
+.content__portfolio__tabs-gorizontal {
+    margin-bottom: 60px;
+}
+.tabs-list {
+    list-style: none;
+    .tab-list__item {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .tab-list__item a{
+        @include make-btn(10px, $buttons-text-color, $buttons-text-color, 15px);
+            text-decoration: none;
+            font-size: $main-font-size + 3px;
+            text-transform: capitalize;
+    }
+}
+
+.content__portfolio__tabs-project-item .item-content{
+    height: 370px;
+    background: darken($content-our-works-background-color, 10%);
+    border: 1px solid #eee;
+    margin-bottom: 30px;
+    position: relative;
+    &:hover .item-content_project-name {
+        display:block;
+    }
+}
+
+.item-content_project-name {
+    position: absolute;
+    left:0;
+    bottom:0;
+    right:0;
+    text-align: center;
+    background: $main-text-color;
+    display: none;
+    h4 {
+        color: $buttons-text-color;
+        font-size: $main-font-size + 2px;
+        font: $main-font-bold;
+        text-transform: uppercase;
+        padding: 30px 0 20px 0;
+    }
+    p {
+        font-size: $main-font-size - 4px;
+        font-family: $main-font-thin;
+        padding-bottom: 30px;
+    }
+}
+.plus {
+        @include spritebox(-186px, -287px, 32px, 31px); 
+    margin-bottom: 140px;
+} 
+
+/*Content testimonial*/
+.content__testimonial {
+    background: $content-video-background-color;
+    padding: 65px 0 30px 0;
+    text-align: center;
+    color: $main-text-color;
+}
+.content__testimonial-content {
+    margin: 0 200px; 
+}
+.content__testimonial__quote {
+    font: $main-font-thin;
+    font-size: $main-font-size + 14px;
+    margin-bottom: 25px;
+}
+.content__testimonial__slider-img {
+    background: url('../img/jack-efron_photo.png') no-repeat -40px -20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.content__testimonial__slider {
+
+    h3 {
+        font-size: $main-font-size;
+        font-family: $main-font-bold;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+    .slider-list {
+        list-style: none;
+        margin-top: 30px;
+        li {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 1px solid  $main-text-color;
+            margin: 0 5px;  
+            &:first-child {
+                background: $main-text-color;
+            }
+        }
+    }
+}
+/*Our team*/
+.content__team {
+    background: $main-text-color;
+    color: #7f7f7f;
+}
+.content__team_headline {
+    @extend .content__portfolio_headline;
+    margin-bottom: 80px;
+}
+
+.member-photo {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background: darken($content-our-works-background-color, 10%);
+    position: relative;
+    margin-bottom: 50px;
+    .member-social-contact {
+        position: absolute;
+        display: inline-block;
+        top: 35%;
+	    right: -75%;
+    }
+}   
+.social-icon-twitter {
+    display: inline-block;
+    background: $buttons-text-color url('../img/twitter_icon.png') no-repeat center center;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.social-icon-fb {
+    @extend.social-icon-twitter;
+    background-image:url('../img/facebook_icon.png'); 
+}
+.social-icon-insta {
+    @extend.social-icon-twitter;
+    background-image:url('../img/insta_icon.png'); 
+}
+
+.member-information {
+    margin-left: 115px; 
+    h3 {
+        color: $buttons-text-color;
+        font-size: $main-font-size + 2px;
+        font: $main-font-bold;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+    .member-position {
+        display: inline-block;
+        font-size: $main-font-size - 4px;
+        font-family: $main-font-thin;
+        margin-bottom: 30px;
+    }
+    p{
+        font-family: $main-font-thin;
+        font-size: $main-font-size - 4px;
+        margin-bottom: 50px;
+    }
+} 
+
+/*Statistics*/
+.content__stat {
+    background: $content-video-background-color;
+    color: $main-text-color;
+    font-family: $main-font-thin;
+    padding: 80px 0;
+    text-align: center;
+}
+.content__stat-item__img-gift {
+    @include spritebox(-73px, -229px, 54px, 62px);
+    margin: 0 auto;
+}
+
+.content__stat-item__img-speech {
+    @include spritebox(-0px, -229px, 58px, 73px);
+    margin: 0 auto;
+}
+
+.content__stat-item__img-cup {
+    @include spritebox(-229px, -163px, 58px, 75px);
+    margin: 0 auto;
+}
+.content__stat-item__img-rummer {
+    @include spritebox(-229px, -100px, 63px, 67px);
+    margin: 0 auto;
+}
+
+.content__stat-item__number {
+    font-size: $main-font-size + 72;
+    margin: 45px 0 0 0;
+    display: inline-block;
+}
+.content__stat-item {
+    h3 {
+        font-size: $main-font-size + 2px;
+        font-family: $main-font-bold;
+        text-transform: uppercase;
+    }
+}
+
+/*Our skills*/
+
+.content__skills {
+    font-family: $main-font-thin;
+    font-size: $main-font-size - 4px;
+}
+.content__skills_headline {
+    @extend.content__team_headline;
+}
+.circle {
+    color: $buttons-text-color;
+}
+
+
+.content__skills-information__text {
+    @extend.member-information;
+    h3 {
+        margin: 50px 0 30px 0;
+    }
+    p {
+        margin-bottom: 25px;
+    }
+}
+.content__skills__tabs {
+    margin-bottom: 140px;
+}
+
+.content__skills__tabs-item {
+    border: 1px solid $darken-text-color;
+    border-radius: 10px;
+    position: relative;
+    color: $darken-text-color;
+    margin-bottom: 10px;
+    &:nth-child(1) {
+        color: $buttons-text-color;
+        margin-bottom: 0;
+    }
+    &:nth-child(3) ul li {
+        background: url($img-folder+"lock_icon.png") no-repeat 20px center; 
+    }
+    &:nth-child(4) ul li {
+        background: url($img-folder+"arrow_icon.png") no-repeat 20px center; 
+    }
+    &:nth-child(5) ul li {
+        background: url($img-folder+"phone_icon.png") no-repeat 20px center; 
+    }
+    &:nth-child(6) ul li {
+        background: url($img-folder+"phonebook_icon.png") no-repeat 20px center; 
+    }
+    ul {
+        @extend.tabs-list; 
+        display: inline-block;
+        font-family: $main-font-bold;
+    }
+    li {
+        padding: 25px 0px 25px 60px;
+        background: url($img-folder+"rocket_icon.png") no-repeat 20px center;
+    }  
+}
+
+.minus {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: $main-font-size + 4px;
+}
+
+.content__skills__tabs-item__text {
+    margin: 20px 20px 30px 20px;
+}
+
+/*ADS*/
+
+.content__ads {
+    font-family: $main-font-thin;
+    font-size: $main-font-size + 30px;
+    background: $buttons-text-color;
+    
+}
+
+.conten__ads-info {
+    text-align: center;
+    .user-mail {
+    width: 64%;
+    padding: 30px 0;
+    background: $buttons-text-color;
+    color: $main-text-color;
+    outline: none;
+    border: none;
+    text-indent: 0;
+    
+}}
+
+.subscribe-btn {
+    @include make-btn(10px, $buttons-text-color, $main-text-color, 15px);
+    background: $main-text-color;
+    font-family: $main-font-reg;
+    font-size: $main-font-size;
+    }
+
+/*Our clients*/
+
+.content__clients {
+    background: #7f7f7f;
+    padding: 30px 0;
+}
+
+[class*='content__clients-list__item-'] {
+    float: left;
+    width: 170px;
+    height: 100px;
+    margin-right: 30px;
+    cursor: pointer;
+    &:last-child {
+    margin-right: 0;
+    }
+}
+
+.content__clients-list {
+    margin: 0 auto;
+    max-width: 970px;
+    .content__clients-list__item-1 {
+        background:#a6a6a6 url($img-folder+"envato_logo.png") no-repeat center center;
+    }
+    .content__clients-list__item-2 {
+        background:#a6a6a6 url($img-folder+"wordpress_logo.png") no-repeat center center;
+    }
+    .content__clients-list__item-3 {
+        background:#a6a6a6 url($img-folder+"dribble_logo.png") no-repeat center center;
+    }
+    .content__clients-list__item-4 {
+        background:#a6a6a6 url($img-folder+"envato_logo.png") no-repeat center center;
+    }
+    .content__clients-list__item-5 {
+        background:#a6a6a6 url($img-folder+"wordpress_logo.png") no-repeat center center;
+    }
+}
+
+/*Contacts*/
+.content__contacts {
+    background: $content-our-works-background-color;
+}
+
+.content__contacts_headline {
+@extend.content__skills_headline;
+    margin-bottom: 40px;
+}
+.company-contacts {
+    p{
+        color: $darken-text-color;
+        margin-bottom: 20px;
+    }
+}
+.content__contacts__social__list {
+    list-style: none;
+    margin: 20px 0 50px 0;
+    line-height: 15px;
+    
+    li {
+        display: inline-block;
+        margin-right: 20px;
+        height: 15px;
+        cursor: pointer;
+    }
+}
+
+.content__contacts__social__list-twitt {
+    @include spritebox(-409px, -73px, 12px, 15px);
+}
+.content__contacts__social__list-fb{
+    @include spritebox(-388px, -54px, 16px, 8px);
+}
+.content__contacts__social__list-google {
+    @include spritebox(-461px, -28px, 16px, 15px);
+}
+.content__contacts__social__list-pin {
+    @include spritebox(-451px, -54px, 15px, 15px);
+}
+.content__contacts__social__list-insta {
+    @include spritebox(-358px, -73px, 14px, 14px);
+}
+.content__contacts__social__list-you {
+    @include spritebox(-392px, -73px, 12px, 17px);
+}
+.content__contacts__social__list-skype {
+    @include spritebox(-329px, -73px, 15px, 15px);
+}
+.content__contacts__social__list-ball {
+    @include spritebox(-344px, -73px, 15px, 14px);
+}
+
+.contacts__user-mail {
+    width: 48%;
+    float: left;
+    position: relative;
+}
+    .user-mail__text {
+        width: 100%;
+        padding: 3.5% 10px;
+        margin-bottom: 30px;
+        background: $content-our-works-background-color;
+        font-size: $main-font-size;
+        outline: none;
+        font-weight: 700;
+        text-indent: 38px;
+        border: solid 2px #222;
+    }
+.msg-img {
+    @include spritebox(-396px, -54px, 15px, 18px);
+    position: absolute;
+    top: 23%;
+    right: 87%;
+    display: inline-block;
+}
+.contacts__user-name {
+    @extend .contacts__user-mail;
+    float: right;
+}
+.user-name__text {
+    @extend .user-mail__text;
+}
+.user-img {
+    @extend .msg-img;
+    @include spritebox(-414px, -54px, 15px, 18px);
+}
+.contacts__user-message {
+    position: relative;
+}
+.user-message__text {
+    @extend .user-mail__text;
+    resize: none;
+    min-height: 100px;
+    padding: 2% 10px;
+    margin-bottom: 145px;
+}
+.pen-img {
+    @include spritebox(-433px, -54px, 15px, 18px);
+    position: absolute;
+    top: 8%;
+    right: 94%;
+    display: inline-block;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 1em 0;
+    background: url($img-folder+"check_green_icon.png") no-repeat 112px 25px $main-text-color;
+    text-align: center;
+    font-size: $main-font-size + 8px;
+    color: $buttons-text-color;
+    outline: none;
+    border: 3px solid $main-text-color;
+    margin-top: 3.5em;
+    cursor: pointer;
+    border-radius: 15px;
+    &:hover {
+        background: url($img-folder+"check_green_icon.png") no-repeat 112px 25px;
+        border-color: $buttons-text-color;
+    }
+}

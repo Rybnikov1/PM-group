@@ -1,0 +1,42 @@
+@import "5_import.less";
+
+.subheader {
+	&:extend(.header);
+	padding: 10px;
+}
+
+.allcaps {
+	text-transform: capitalize;
+}
+.border {
+	border: @def_border_type;
+}
+
+.subheader_text:extend(.text, @{font_class}, .allcaps) {
+ 	// @{font_class} - will NOT work
+	text-align: center;
+} 
+
+@{activeclass}:extend(.border) {}
+
+.big {
+    opacity:0.8;
+}
+.big.green {
+	float: left;
+	color: green;
+}
+
+
+.big.yellow {
+	background-color: yellow;
+}
+
+.small:extend(.big) {
+
+}
+
+.wide:extend(.big all) {
+	
+}
+

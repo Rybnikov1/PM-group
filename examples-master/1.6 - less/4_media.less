@@ -1,0 +1,24 @@
+.content {
+	@media screen {
+		font-size: 0;
+		line-height: 0;
+		margin: 0;
+		padding: 0;
+		@media (min-width: 768px) {
+			.nav_left, .article, .aside {
+				float: left;
+			}
+			.nav_left, .aside {
+				width: 20%;
+			}
+			.article {
+				width: 60%;
+			}
+		}
+		@media (max-width: 768px) {
+					.nav_left, .article, .aside {
+						width: 100%;
+					}
+				}		
+	}
+}

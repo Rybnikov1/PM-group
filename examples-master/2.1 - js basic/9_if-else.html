@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript conditions</title>
+		<script>	
+		var name, age;
+		name = prompt("Please, enter your name");
+		age = prompt("Enter your age");
+		if (isNaN(parseInt(age))) {
+			alert("Age should be a number");
+		} else if (age < 18){
+			alert("You are too young. Sorry(((");
+		} else {
+			document.write("Hello, " + name + "! You were born in " + (2015 - age));
+		}
+		</script>
+	</head>
+	<body>
+	<br>Press F12 to open DevTools
+	</body>
+</html>

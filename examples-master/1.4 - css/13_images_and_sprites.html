@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Images and sprites</title>
+		<style>
+		.star {
+			width: 10%;
+			height: 10%;
+		}
+		.star:hover {
+			width:11%;
+		}
+		.star:active {
+			width:12%;
+		}
+		.bound {
+			min-width: 100px;
+			min-height: 100px;
+			max-width: 200px;
+			max-height: 200px;
+		}
+		.sprite_img1 {
+			background: url(sprite.png) no-repeat 0 0;
+			height: 50px;
+			width: 50px;
+		}
+		.sprite_img1:hover {
+			background: url(sprite.png) no-repeat -2px -2px;
+			background-size:530px 265px;
+		}
+		.sprite_img2 {
+			background: url(sprite.png) no-repeat -50px -50px;
+			height: 50px;
+			width: 50px;
+		}
+		.sprite_img2:hover {
+			background: url(sprite.png) no-repeat -55px -55px;
+			background-size:530px 265px;
+		}
+		.sprite_img3 {
+			background: url(sprite.png) no-repeat -100px -150px;
+			height: 50px;
+			width: 50px;
+		}
+		.sprite_img4 {
+			background: url(sprite.png) no-repeat -50px -100px;
+			height: 50px;
+			width: 50px;
+		}
+		.sprite_img5 {
+			background: url(sprite.png) no-repeat -50px 0px;
+			height: 50px;
+			width: 50px;
+		}
+		</style>
+	</head>
+	<body>
+		<h2>Image with a link and states</h2>
+		<a href="#"><img class="star" src="star.png" alt="Star"></a>
+		<h2>Images bound to min and max dimensions</h2>
+		<br>
+		<img src="bg.png" class="bound">
+		<br>
+		<img src="list.png" class="bound">
+		<br>
+		<h2>Sprites</h2>
+		<div class="sprite_img1"></div>
+		<div class="sprite_img2"></div>
+		<div class="sprite_img3"></div>
+		<div class="sprite_img4"></div>
+		<div class="sprite_img5"></div>
+	</body>
+</html>

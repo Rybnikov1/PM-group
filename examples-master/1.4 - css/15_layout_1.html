@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Layout: position and z-index</title>
+		<style>
+			body {
+				height: 2000px;
+			}
+			.main {
+				background-color: #ddd;
+				border: 1px solid black;
+				width: 200px;
+				height: 100px;
+				margin: 10px;
+				padding: 10px;
+			}
+			.simple {
+				background-color: #aaa;
+				width: 100px;
+				height: 50px;
+			}
+			.relative {
+				position: relative;
+			}
+			div.fixed {
+				position: fixed;
+				background-color: #333;
+				color: white;
+				top: 200px;
+				left: 500px;
+			}
+			div.absolute {
+				position: absolute;
+				padding:0 0 0 80px;
+				margin: 0;
+				height: 200px;
+				left: 150px;
+			}
+			.zindex {
+				position: relative;
+				z-index: 2;
+			}
+			.move {
+				top: 25px;
+				left: 15px;
+			}
+
+		</style>
+	</head>
+	<body>
+			<div class="main">Default position is static</div>
+			<div class="fixed main">Fixed position with top and left properties. This div stays
+			on the same place even when you scroll the page
+			</div>
+			<div class="relative main move" style="width:400px">This element has a relative position. 				
+			Relative position means this element is displayed 
+			relative to its original position. Moving it with top, left, right, bottom 
+			properties won't affect the layout.</div>
+			<div class="relative main">
+				<div class="absolute main">Absolutly positioned element doesnt interact 
+				with the structure of other elements. In this case, it doesn't affect the position of a simple div</div>
+				<div class="simple">Simple div</div>
+			</div>
+			<div class="zindex main">			
+				This element is relative with z-index 2
+				<div class="main" style="">It's child also onherits z-index
+				they are both displayed over any other div</div>
+			</div>
+			<div class="main"></div>
+	</body>
+</html>

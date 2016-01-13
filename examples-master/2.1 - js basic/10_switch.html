@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript conditions</title>
+		<script>	
+		var bar, otherVar, condition;
+		bar = prompt("Enter something");
+		switch (bar ? (!isNaN(parseInt(bar)) ? typeof parseInt(bar) : typeof (bar)) : !!bar ) {
+			case "number" : {
+				alert("you entered a number");
+				break;
+			}
+			case "string" : {
+				alert("you entered text");
+				break;
+			}
+			case false : {
+				alert("you entered nothing");
+				break;
+			}
+		}
+		otherVar = Math.round(Math.random() * 10);
+		console.log("start value = " + otherVar);
+		switch (otherVar) {
+			case 1: otherVar *= 3; break;
+			case 2: otherVar += 10; break;
+			case 3: otherVar -= 1; break;
+			case 6: otherVar /= 2; break;
+			default: otherVar += 100;
+		}
+		console.log("result: " + otherVar);
+		</script>
+	</head>
+	<body>
+	<br>Press F12 to open DevTools
+	</body>
+</html>

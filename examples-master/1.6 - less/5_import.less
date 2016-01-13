@@ -1,0 +1,25 @@
+@import "1_vars.less";
+@import (reference) "2_mixins_basic.less";
+@import (optional) "no_such_file";
+// reference: use a Less file but do not output it
+// inline: include the source file in the output but do not process it
+// less: treat the file as a Less file, no matter what the file extension
+// css: treat the file as a CSS file, no matter what the file extension
+// once: only include the file once (this is default behavior)
+// multiple: include the file multiple times
+// optional: continue compiling when file is not found
+
+@def_border_type: 1px solid @bordercolor;
+@btn_bg_active: #fcaa3b;
+
+.someclass {
+	color: @mainbg;
+}
+
+.someclass .@{activeclass} {
+	border: @def_border_type;
+}
+
+.button_@{activeclass} {
+	background: @btn_bg_active;
+}
