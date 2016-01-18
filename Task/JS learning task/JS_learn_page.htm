@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <link rel="stylesheet" href="supertest.css">
+</head>
+<body>
+<h1>HI!!!</h1>
+   <p id="text"></p>
+    <!--Lab work 3-->
+    <script>
+        var mark = prompt ('Enter mark'), summ=0;
+        if (!isNaN (mark) && mark>0){
+        for (var i=0; i<5; i++){
+            if ( mark>60 ){
+            alert ('You are pased');
+            mark = prompt ('Enter mark' + i);
+            }
+        }
+            }
+    </script>
+    <script>
+        var num1, num2, perf, result;
+        for (var i=0;  ; i++){
+                num1 = parseInt (prompt ('Enter number 1'));
+                if (!num1) break;
+                num2 = parseInt (prompt ('Enter number 2'));
+                if (!num2) break;    
+                perf = prompt ('Enter function');
+                if (perf ==="+") result = num1 + num2;
+                if (perf ==="-") result = num1 - num2;
+                if (perf ==="/") result = num1 / num2;
+                if (perf ==="*") result = num1 * num2;
+                alert (result);
+                }
+    </script>
+    <!--end Lab work 3-->
+    
+    <!--<script>
+        var arr= [10, 38, 22, 3],
+        c,
+        result;
+        c = function foo (arr, arr2) {
+            var summ;
+            for ( var i in arr ){
+            summ += arr [i];
+            }
+            return summ/arr.length;
+        }
+    </script>-->
+</body>
+</html>
