@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>test</title>
-    <link rel="stylesheet" href="supertest.css">
+    <link rel="stylesheet" href="">
 </head>
 <body>
 <h1>HI!!!</h1>
    <p id="text"></p>
     <!--Lab work 3-->
+<!--
     <script>
         var mark = prompt ('Enter mark'), summ=0;
         if (!isNaN (mark) && mark>0){
@@ -35,6 +36,7 @@
                 alert (result);
                 }
     </script>
+-->
     <!--end Lab work 3-->
     
     <!--<script>
@@ -46,8 +48,158 @@
             for ( var i in arr ){
             summ += arr [i];
             }
-            return summ/arr.length;
+            return summ(arr.length);
         }
     </script>-->
+    
+    <!--21/01/2016-->
+    <script>
+        var array, max, min, sortArr1, sortArr2;
+        // Task1 - функция для возврата рандомного массива
+        function createRandomArr (size){
+            var arr = [];
+            if (typeof size !== 'number' || size < 0){
+                console.log ('Size must be a number');
+                return;
+            }
+            for (var i = 0; i < size; i++) {
+                arr[i] = Math.round(Math.random() * 100);
+                /*arr.push(Math.round(Math.random() * 100)); // или так */  
+            }
+            
+            console.log(arr);
+            return arr;
+        }
+        // Task 2 - функция, которая возвращает наибольшее значение из массива array = createRandomArr(Math.round(Math.random() * 100));
+        function getMaxArrayItem (arr) {
+            var maxItem = array[0];
+            for (var i in array){
+                maxItem = Math.max(maxItem, arr[i]);
+                /*if (arr[i] > maxItem) maxItem = arr[i]; //или так*/
+            }
+            return maxItem;
+        }
+        
+        array = createRandomArr(Math.round(Math.random() * 100));
+        max = getMaxArrayItem(array)
+        console.log(max);
+        // Task 2 - функция, которая возвращает наименьшее значение из массива array = createRandomArr(Math.round(Math.random() * 100));
+        function getMinArrayItem (minArr){
+            var minItem = array[0];
+            for (var k in array) {
+                minItem = Math.min(minItem, minArr[k]);
+            }
+            return minItem;
+        }
+        min = getMinArrayItem(array);
+        console.log(min);
+        // Task 3 - Sorting array function
+        function toSort (sortArr) {
+            var sortingArr = sortArr.sort(compareNumeric);
+            function compareNumeric (a, b){
+                return a - b;
+            }
+            return sortingArr;
+        }
+        sortArr1 = toSort(array);
+        console.log(sortArr1);
+        
+    /*    // Task 4 - Sorting array by loop
+        function toSortLoop (sortArrLoop) {
+            var count = sortArrLoop.length - 1;
+            for (i = 0; i < count; i++){
+                var min = i;
+                for (var j = 0; j < count - i; j++){
+                    if ( sortArrLoop[j] < sortArrLoop[j + 1]) 
+                        var max = sortArrLoop[j];
+                        sortArrLoop[j] = sortArrLoop[j + 1];
+                        sortArrLoop[j + 1] = max;
+                }
+                return sortArrLoop;
+            }
+        }
+        sortArr2 = toSortLoop(array);
+        console.log(sortArr2);*/
+    </script>
+    <!--21/01/2016 end-->
+    
+    <!--23/01/2016-->
+    <script>
+    var cache = [];
+
+    /*function fib (n) {
+	   if (n === 0) return n;
+	   if (n === 1) return n;
+	   return fib(n-2) + fib(n-1);
+    }*/
+
+    function fibCache () {
+	   if (cache[n]) return cache[n];
+	   if (n === 0) return cache[n] = n;
+	   if (n === 1) return cache[n] = n;
+	   return cache[n] = fibCache(n-2) + fibCache(n-1);
+	
+    }
+
+        var person = function (name, age) {
+            this.name = name ;
+            this.age = age;
+        }
+        person.prototype.sayHi = function (){
+            console.log("Hi, I'm " + this.name + ". I'm " + this.age + "years old");
+        }
+        
+        var Joe = new person("JOe", 25);
+        Joe.sayHi();
+        
+        var Vasya = new person("Vasya", 33);
+        Vasya.sayHi();
+        
+        var Petya = new person("Petya", 11);
+        Petya.sayHi();
+        
+        var obj = {
+            name: 'aaa',
+            age: 5
+        }
+        person.prototype.sayHi.call(obj);// use sayHi to obj
+        person.prototype.sayHi.apply(obj); // use sayHi to obj. Arguments in array
+       var c = person.prototype.sayHi.bind(obj); // copy to c 
+        console.log(c);
+        
+        //Task 1 - function copy in array object property
+        var obj34 = {1:22, 33:15};
+        
+        function objToArray (ourObj) {
+            var arr = [];
+            if (!Array.isArray(obj)){
+                for (var i in ourObj){
+                if (ourObj.hasOwnProperty(i)){
+                    arr.push(ourObj[i]);
+                }
+                }
+            return arr;
+            }
+            console.log("Only work with objects");
+        }
+        console.log(objToArray(obj34));    
+        
+        // Task 2 - Uppercase letter
+        
+        function toUpperCase (ourStr) {
+            var newStr = "";
+            var strArr = ourStr.split(" ");
+            for (var i in strArr){
+               var firstLetter = strArr[i].substr(0, 1).toUpperCase();
+                var secondText = strArr[i].substr(1);
+                strArr[i] = firstLetter + secondText;
+            }
+            newStr = strArr.join(" ");
+            return newStr;
+        }
+        console.log(toUpperCase("how are you"));
+        
+        </script>
+<!--23/01/2016 end-->
 </body>
 </html>

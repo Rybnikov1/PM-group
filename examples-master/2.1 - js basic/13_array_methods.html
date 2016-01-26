@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript arrays</title>
+		<script>
+		var arr = [22, "text", 55, 69, 5],
+			arr2 = ["a", "b", "c"],
+			temp;
+
+			console.log(arr.length);
+
+			//join array into a string
+			temp = arr.join();
+			console.log(temp);
+
+			//pop removes last element from array and returns it
+			temp = arr.pop();
+			console.log(temp);
+			console.log(arr);
+
+			//push adds an element to the end of array
+			arr.push(temp);
+			console.log(arr);
+
+			//shift - removes the first element from an array and returns that element.
+			temp = arr.shift();
+			console.log(temp);
+			console.log(arr);
+
+			//unshift - adds one or more elements to the front of an array and returns the new length of the array.
+			temp = arr.unshift(temp);
+			console.log(temp);
+			console.log(arr);
+
+			//reverse - turns array backwards
+			arr.reverse();
+			console.log(arr);
+
+			//sort - sorts array according to the callback function specified
+			//function has two arguments - elements that are evaluated
+			//the function must return either a negative, a positive number or 0
+			//negative means a > b, positive: a<b, equals - a=b
+			arr.sort(function (a, b) {
+				if (typeof a === "number" && typeof b !== "number") {
+					return -1;
+				} else if (typeof a !== "number" && typeof b === "number") {
+					return 1;
+				} else {
+					return b - a;
+				}
+			});
+			console.log(arr);
+
+			//concat - create new array by merging array with other values or arrays
+			temp = arr.concat(arr2);
+			console.log(temp);
+			temp = arr.concat(2, 3, 88, 152213);
+			console.log(temp);
+			console.log(arr);
+
+			//splice - removes a number of items from array starting from index 
+			//arguments provided after that are items to insert inside the array into the removed positions
+			temp = arr.splice(/*start index*/0, /*how many to delete*/1 /*, replace with*/);
+			console.log(temp);
+			console.log(arr);
+
+			temp = arr.splice(0, 1, temp[0], 33, 1);
+			console.log(temp);
+			console.log(arr);
+
+			//slice - returns a section of array
+			temp = arr.slice(1, 2);
+			console.log(temp);
+			temp = arr.slice(-3, -1);
+			console.log(temp);
+			console.log(arr);
+
+			//indexOf and lastIndexOf - return the first/last index of a value in array, if it is not found returns -1
+			console.log(arr.indexOf("text"));
+			console.log(arr.lastIndexOf(22));
+			console.log(arr.indexOf("cde"));		
+
+			arr.forEach(function(val, i) {	
+				if (typeof val === "number") {
+					val *= 2;
+					console.log(val);
+				}
+			});
+			console.log(arr);
+
+			//array values stay the same!!! use arr[i] to assign values
+			//map - call a specific function for every 
+			arr.map(function(val) {
+			  return val * 2;
+			});
+			console.log(arr);
+
+			//every/some - callse a function for every element. if it returns true for every(some) element - the method retruns true
+			temp = arr.some(function(val) {
+			  return typeof val === "string";
+			});
+			console.log(temp);
+			console.log(arr);
+			temp = arr.every(function(val) {
+			  return typeof val !== "null";
+			});
+			console.log(temp);
+			console.log(arr);
+
+			//filter - creates a new array with all of the elements of this array for which the provided filtering function returns true
+			temp = arr.filter(function(val) {
+			  return typeof val === "number";
+			});
+			console.log(temp);
+			console.log(arr);
+
+			//fill - change all elements to one value. with start (and end) specified only fills items in this range
+			arr.fill("some text" /*, start, end*/);
+			console.log(arr);
+
+		</script>
+	</head>
+	<body>
+	<br>Press F12 to open DevTools
+	</body>
+</html>

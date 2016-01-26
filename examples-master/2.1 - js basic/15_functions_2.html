@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript function definitions</title>
+		<script>
+		//you can assign a function to a variable
+		//in this case it doesn't really need to be named itself
+		var foo = function /*Name here*/ () {
+			console.log("Hello!");
+		},
+		foo1 = function fooName () {
+			console.log("Goodbye!");
+		}
+
+		//these functions dont have any arguments, so they are called with empty braces
+		console.log(foo());
+		console.log(foo1());
+
+		console.log(foo);
+		console.log(foo1);
+
+		console.log(fooName); // undefined
+
+		//anonymous functions are the ones without a name and not assigned to anything
+		//usually used as arguments themselves
+
+		console.log(function () {
+			return false;
+		});
+
+
+		</script>
+	</head>
+	<body>
+	<br>Press F12 to open DevTools
+	</body>
+</html>

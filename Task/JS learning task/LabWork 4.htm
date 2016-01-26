@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab work 4</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+<h1>Lab work 4</h1>
+   <p id="text"></p>
+    <!--Lab work 4-->
+
+    <script>
+      var cars = [];
+    
+      for (i = 0; i < cars.length; i++){
+        if (cars.length < 5){
+          var carObj = {
+          firmName:prompt('Enter car firm'),
+          modelName:prompt('Enter car model'),
+          engineDisplacement:parseInt(prompt('Enter car engine displacement'))};
+          cars[i] = carObj;
+          cars.push(cars[i]);
+        }
+    }
+    
+    function coolCars(car){
+      var coolCar = [];
+      for (i = 0; i < car.length; i++){
+        if (car[i].engineDisplacement > 2){
+          coolCar.push(car[i]); 
+        }
+      }
+      return coolCar;
+    }
+   console.log(coolCars(cars));//bug: в последний обьект массива дублирует значения из предыдущего
+    </script>
+   
+</body>
+</html>

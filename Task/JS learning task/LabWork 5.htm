@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab work 5</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+<h1>Lab work 5</h1>
+   <p id="text"></p>
+    <!--Lab work 5-->
+
+    <script>
+    function showArg (){
+        var argName = [];
+        var argLength = arguments.length;
+            for (i = 0; i < arguments.length; i++ ){
+                argName[i] = arguments[i];
+            }
+        return console.log('Arguments: ' + argName + '\nNumber of arguments: ' + argLength);
+  }
+  
+    showArg(15, 'string', 20, 56);
+    showArg(15);
+    showArg(15, 44, 66, 89, 'smth new');
+    
+    </script>
+   
+</body>
+</html>

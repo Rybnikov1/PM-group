@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript function definitions</title>
+		<script>
+		var outsideVar = true,
+			temp;
+		//there are few ways to define a function
+
+		//Simple named function: 
+
+		function fooName (arg1, arg2 /*, other args, and more*/) {
+			//this is a function body - a block of instructions? that will 
+			//be executed on function call
+			var x, y, z;
+			x = parseInt(arg1);
+			y = parseInt(arg2);
+			//variables declared inside a function a visible only inside that function and (other functions, defined inside it);
+			if (!isNaN(x) && !isNaN(y)) {
+				return sum(x, y);
+				//any instruction after return statement will not be executed
+			}
+
+			//a function inside a function - visible like variables, inside the function it was defined instanceof
+			function sum (a, b) {
+				return a + b;
+			}
+		}
+
+		//calling a function means specifying it's name with a list of arguments in braces
+		//this will execute all instructions in the function with the argument values specified in braces
+		temp = fooName(10, 20);
+		console.log(temp);
+
+		//you can call a function as many times as you want
+		temp = fooName(temp, 30);
+		console.log(temp);
+
+		//you cannot call a funtion, that is defined inside another function 
+		//from the point in code, that is not inside that function
+		if (sum) {
+			console.log(sum(10, 20));
+		}
+
+
+
+
+		</script>
+	</head>
+	<body>
+	<br>Press F12 to open DevTools
+	</body>
+</html>

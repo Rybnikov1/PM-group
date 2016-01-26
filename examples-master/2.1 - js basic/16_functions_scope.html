@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript function scope</title>
+		<script>
+		var foo;
+
+		function topLevel1 (x, y) {
+			return function (z) {
+				return x*2 - y + z;
+			}
+		}
+
+		foo = topLevel1(5, 6);
+		console.log(foo);
+		console.log(foo(8));
+
+		function topLevel2 () {
+			var insideScope = true;
+
+			return function (isTrue) {				
+				insideScope = isTrue;
+				if (insideScope) {
+					console.log("Changed to true");
+				} else {
+					console.log("Changed to false");
+				}
+			}
+		}
+
+		foo = topLevel2();
+		foo(true);
+
+		</script>
+	</head>
+	<body>
+	<br>Press F12 to open DevTools
+	</body>
+</html>

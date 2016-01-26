@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript function callbacks</title>
+		<script>
+		function getValues (valCount, callback) {
+			var variables = [];
+			for (var i = 0; i < valCount; i++) {
+				variables.push(prompt("Enter var#" + i));				
+			}
+			callback(variables);
+		}
+
+		function countNumbers (numbers) {
+			var count = 0;
+			numbers.forEach(function(val) {
+				count += !isNaN(parseInt(val)) ? parseInt(val) : 0;
+			});
+			alert(count);
+		}
+
+		function sorter (a, b) {			
+			if (!isNaN(parseInt(a)) && isNaN(parseInt(b))) {
+				return -1;
+			} else if (isNaN(parseInt(a)) && !isNaN(parseInt(b))) {
+				return 1;
+			} else {
+				return parseInt(b) - parseInt(a);
+			}			
+		}
+
+		function applySorter (array) {
+			array.sort(sorter);
+			console.log(array);
+		}
+
+		getValues(5, countNumbers);
+
+		getValues(5, applySorter);
+
+
+		</script>
+	</head>
+	<body>
+	<br>Press F12 to open DevTools
+	</body>
+</html>
