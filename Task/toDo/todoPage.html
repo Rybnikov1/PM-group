@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TO DO</title>
+    <script type="text/javascript" src="xhr_utils.js"></script>
+    <style>
+        ul{
+            margin: 0px;
+            padding:0px;
+        }
+        li {
+            background: #d8d6d8;
+            width: 500px;
+            border: 1px solid #000000;
+            list-style: none;
+            line-height: 30px;
+            padding-left: 10px;
+            margin: 5px 0;
+            position: relative;
+        }
+        span{
+            padding-left: 10px;
+        }
+        .checked {
+            text-decoration: line-through;
+            color: #0fa233;
+        }
+        .delB {
+           position: absolute;
+           right: 5px;
+            top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>TO_DO list</h1>
+    <div id="container">
+        <input type="text" id="itemText">
+        <button id="btnNewItem">New task</button>
+        <ul id="taskList">
+
+        </ul>
+    </div>
+    <script type="text/javascript" src="toDo.js" async defer></script>
+</body>
+</html>

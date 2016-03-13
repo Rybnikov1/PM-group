@@ -1,0 +1,18 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "name": "Name of the task",
+      "description": "Task description",
+      "dueDate": "2016-03-25T09:27:51.412Z",
+      "isDone": false
+    },
+    {
+      "id": 2,
+      "name": "New task",
+      "description": "New task description",
+      "dueDate": "2016-02-24T09:37:11.412Z",
+      "isDone": true
+    }
+  ]
+}
