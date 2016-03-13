@@ -4,33 +4,19 @@
 	<head>
 		<title>JavaScript function scope</title>
 		<script>
-		var foo;
-
-		function topLevel1 (x, y) {
-			return function (z) {
-				return x*2 - y + z;
-			}
+		var cache = [];
+		function fib (n) {
+			if (n === 0) return n;
+			if (n === 1) return n;
+			return fib(n-2)+fib(n-1);
 		}
 
-		foo = topLevel1(5, 6);
-		console.log(foo);
-		console.log(foo(8));
-
-		function topLevel2 () {
-			var insideScope = true;
-
-			return function (isTrue) {				
-				insideScope = isTrue;
-				if (insideScope) {
-					console.log("Changed to true");
-				} else {
-					console.log("Changed to false");
-				}
-			}
+		function fibCache (n) {
+			if (cache[n]) return cache[n];
+			if (n === 0) return cache[n] = n;
+			if (n === 1) return cache[n] = n;				
+			return cache[n] = fibCache(n-2)+fibCache(n-1);
 		}
-
-		foo = topLevel2();
-		foo(true);
 
 		</script>
 	</head>

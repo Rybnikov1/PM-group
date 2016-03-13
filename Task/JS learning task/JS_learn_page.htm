@@ -199,7 +199,101 @@
         }
         console.log(toUpperCase("how are you"));
         
+        
+        
         </script>
 <!--23/01/2016 end-->
+
+<!--30/01/2016-->
+    <script>
+       a=    {
+     text: "aaa@bbb.com",
+     validator: /^[a-z][a-z0-9.-_]{3,}@([a-z0-9.-]{2,}.[a-z]{2,})+/
+    }
+
+    b = {
+     text: "+380964445533",
+     validator: /\+\d{12}/
+    }
+
+    var validators = (function () {
+     var valObj = {
+      mail: /^[a-z][a-z0-9.\-\_]{3,}@([a-z0-9.\-\]{2,}.[a-z]{2,})+/,
+      phone: /\+\d{12}/
+     };
+
+     return {
+      getValidator: function (valType) {
+       return valObj[valType];
+      },
+      addValidator: function (valType, reg) {
+       if (!valObj[valType]) {
+        valObj[valType] = reg;    
+       }
+      }
+     } 
+    })();
+
+    var ValidString = function (text, validator) {
+     this.validator = validators.getValidator(validator);
+     this.text = text;
+     this.isValid = this.validate();
+    }
+
+    ValidString.prototype.validate = function () {
+     return this.validator.test(this.text);
+    }
+
+    ValidString.create = function (text, reg) {
+     return new ValidString(text, reg);
+    }
+
+    var email = new ValidString("aaa@bbb.com", "mail");
+    var phone = new ValidString("+380964445533", "phone");
+    </script>
+
+
+    <h1>Enter day</h1>
+        <input type="text" id="date">
+        <button id="get">get result</button>
+        <div id="result">Press button</div>
+        <script>
+        	(function (){
+        		var input = document.getElementById("date"),
+        			button = document.getElementById("get"),
+        			result = document.getElementById("result");
+        			button.addEventListener("click", showResult);
+        			function showResult () {
+        				result.innerHTML = calculate(input.value);
+        			}
+        			function calculate (value) {
+        				var currDate = new Date();
+        				var newDate = new Date();
+        				var daysArray = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+        				var value = parseInt(value);
+        				if (isNaN(value) || value > 31) {
+        					return "Invalid date";
+        				}
+        				newDate.setDate(value);
+        				if (currDate.getMonth() !== newDate.getMonth()) {
+        					return "No day with this in this month";
+        				} 
+                        if (newDate.getDate() < currDate.getDate()){
+                            newDate.setMonth(currDate.getMonth() + 1);
+                        }
+                        
+        					return daysArray[newDate.getDay()];
+        				
+        			}
+        	})()
+    </script>
+
+<!--30/01/2016 end-->
+<!--02/02/2016-->
+
+
+
+<!--02/02/2016 end-->
+
 </body>
 </html>

@@ -4,25 +4,44 @@
 	<head>
 		<title>JavaScript arrays</title>
 		<script>
-		var arr;
-			// possible but not recomended
-			arr = new Array();
+		var arr = [],
+			arr2 = [],
+			maxJ = 2,
+			m = 0,
+			n = 0;
+
+			for (var i = 0; i < 9; i++) {
+				arr[i] = Math.round(Math.random() * 1000);
+			}
+
+			for (var i = 0; i<arr.length; i++) {
+				var min = arr[i];
+				for (var j = i; j < arr.length; j++) {
+					if (arr[j] < min) {
+						min = arr[j];
+						arr[j] = arr[i];
+					}
+				}
+				arr[i] = min;
+			}
+
 			console.log(arr);
-			arr = new Array(8);
-			console.log(arr);
-			arr = new Array(10, 20, 30);
-			// recomeneded - literal syntax;
-			arr = [];
-			console.log(arr);
-			arr = [10];
-			console.log(arr);
-			arr = [10, 20, "blabla", NaN, true, null];
-			console.log(arr);
-			arr = [[10, 20], true, ['bb', 'aa', [1, 2, 3]]]	;
-			console.log(arr);	
-			console.log("Last array length: " + arr.length);
-			console.log("Last arrays first element - aray - length: " + arr[0].length);
-			console.log(arr["0"]);			
+
+			for (var i in arr) {
+				if (m === 0) {
+					arr2[n] = [];
+				}
+				arr2[n][m] = arr[i];
+				if (m === maxJ) {
+					m = 0;
+					n++;
+				} else {
+					m++;
+				}
+			}
+			console.log(arr2);
+
+
 		</script>
 	</head>
 	<body>
